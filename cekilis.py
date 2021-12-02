@@ -2,9 +2,30 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 import random
+import colorama
+from colorama import Fore, Back, Style
+from KekikTaban import KekikTaban
 
-ytLiveChatURL = "https://www.youtube.com/live_chat?v=mxTiT2igK7A"
-keyword = "turkcedev"
+taban = KekikTaban(
+    baslik   = "",
+    aciklama = "",
+    banner   = "Cekilis Botu",
+    girinti  = 1
+)
+
+
+taban.log_salla('KekikAkademi', 'selmankahya', 'kadirilgin1453'
+
+)
+konsol = taban.konsol
+from rich.style import Style
+
+
+
+
+
+ytLiveChatURL = input(Fore.GREEN + "Lütfen Canlı Yayın Linkinizi Giriniz >>>>>> ")
+keyword = input(Fore.GREEN + "Lütfen Çekiliş İçin Seçtiğiniz Kelimeyi Giriniz >>>>>>>>>> ")
 eligibleUsers = set()
 
 # start web browser
@@ -37,23 +58,23 @@ def updateEligibleUsers(messages):
 
 
 def startDrawing(eligibleUsersList):
-    print("Cekilis basliyor! {totalUserCount} kisi hak kazandi.".format(
+    print(Fore.CYAN + "Cekilis basliyor! {totalUserCount} kisi hak kazandi.".format(
         totalUserCount=len(eligibleUsersList)))
 
     time.sleep(3)
     for i in range(1, 5):
         noktalar = i * "."
-        print("Rasgele bir sayi cekiliyor" + noktalar)
+        print(Fore.CYAN + "Rastgele Bir Sayı Çekiliyor" + noktalar)
         time.sleep(1.5)
 
-    print("Hazir misiniz?")
+    print(Fore.CYAN + "Hazır Mısınız?")
     time.sleep(1.5)
-    print("Son kontrolleri yapiyorum..")
+    print(Fore.CYAN + "Son kontrolleri yapıyorum..")
     time.sleep(1.5)
-    print("Bugun nasilsin?")
+    print(Fore.CYAN + "Bugun nasılsın?")
     time.sleep(1.5)
-    print("Son son kontrolleri yapiyorum..")
-    print("{totalUserCount} kisi arasindan kazanan:".format(
+    print(Fore.CYAN + "Son son kontrolleri yapıyorum..")
+    print(Fore.CYAN + "{totalUserCount} kişi arasından kazanan:".format(
         totalUserCount=len(eligibleUsersList)), random.choice(eligibleUsersList))
 
 
