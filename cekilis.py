@@ -2,8 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 import random
-import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 from KekikTaban import KekikTaban
 
 taban = KekikTaban(
@@ -18,7 +17,6 @@ taban.log_salla('KekikAkademi', 'selmankahya', 'kadirilgin1453'
 
 )
 konsol = taban.konsol
-from rich.style import Style
 
 
 
